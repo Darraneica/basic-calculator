@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator - Darraneica Robinson</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">Basic Caculator</h1>
+        <div class="wrapper">
+            <input type="text" id="show" readonly>
+           <div class="numbers grid">
+            <button id="number"
+            class ="color-block" onclick="calculateNum(7)">7</button>
+            <button id="number"
+            class ="color-block" onclick="calculateNum(7)">8</button>
+            <button id="number"
+            class ="color-block" onclick="calculateNum(9)">9</button>
+            <button
+            id ="color-block-div" onclick="showOperator('/')">/</button>
+            <button id="number"
+             class ="color-block" onclick="calculateNum(4)">4</button>
+            <button id="number"
+            class ="color-block" onclick="calculateNum(5)">5</button>
+            <button id="number"
+             class ="color-block" onclick="calculateNum(6)">6</button>
+            <button
+            id ="color-block-multiply" onclick="showOperator('*')">*</button>
+            <button id="number"
+            class ="color-block" onclick="calculateNum(1)">1</button>
+            <button id="number"
+            class ="color-block" onclick="calculateNum(2)">2</button>
+            <button id="number"
+            class ="color-block" onclick="calculateNum(3)">3</button>
+            <button
+             id ="color-block-subtract" onclick="showOperator('-')">-</button>
+            <button id="dot"
+            class ="color-block" onclick="showOperator('.')">.</button>
+            <button id="number"
+            class ="color-block" onclick="calculateNum(0)">0</button>
+            <button
+            id="color-block-plus" onclick="showOperator('+')">+</button>
+            <button id="color-block-red" onclick="getSum()">=</button>
+            <button id="color-block-clear" onclick="clearNum()">C</button>
+           </div>
+        </div>
+    </div>
+    <footer><small>This project was coded by Darraneica Robinson. It is <a href="https://github.com/Darraneica/calculator" target="_blank">open-sourced.</a></small></footer>
+    <script src="script.js"></script>
+</body>
+</html>
