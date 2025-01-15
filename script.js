@@ -1,31 +1,40 @@
-//used arrow function to clear the calculator display.
+const showResults = document.getElementById('show');
+const buttonSound = document.getElementById('buttonSound');
+
+// Play sound when a button is pressed
+const playSound = () => {
+    buttonSound.currentTime = 0; // Reset sound to start
+    buttonSound.volume = 1; // Max volume
+    buttonSound.play();
+};
+
+// Function to clear the calculator screen
 const clearNum = () => {
+    playSound();
     showResults.value = '';
 };
 
-//used arrow function to add numbers to the calculator display. 
+// Function to add numbers to the screen
 const calculateNum = (number) => {
-    //this checks to see if current value already contains a decimal point.
-    if(showResults.value.includes('.') && number === '.'){
-        return; // will not return decimal point.
+    playSound();
+    if (showResults.value.includes('.') && number === '.') {
+        return;
     }
     showResults.value += number;
 };
 
-//used arrow function to add numbers to the calculator display.
+// Function to add operators to the screen
 const showOperator = (operator) => {
+    playSound();
     showResults.value += operator;
 };
 
-//arrow function that executes the calculation.
+// Function to evaluate the expression and display the result
 const getSum = () => {
-    try{
+    playSound();
+    try {
         showResults.value = eval(showResults.value);
-    } catch(error){
+    } catch (error) {
         showResults.value = 'Error';
     }
-
 };
-
-// refers to displaying the calculation on the calculator screen.
-const showResults = document.getElementById('show');
